@@ -1,15 +1,17 @@
 {
-  "name": "socialnetwork",
+  "name": "jwhit-social-network",
   "version": "1.0.1",
-  "description" :"A REST API for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list.",
+  "description": "NoSQL backend",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "seed": "node utils/seed"
+    "seed": "node utils/seed",
+    "heroku-postbuild": "node utils/seed.js"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "mongoose": "^7.0.2"
   },

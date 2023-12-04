@@ -1,0 +1,13 @@
+
+[
+    {
+      "reactionBody": "I agree!",
+      "createdAt": "2023-12-01T13:15:00Z",
+      "username": "user3"
+    },
+    {
+      "reactionBody": "Interesting.",
+      "createdAt": "2023-12-02T10:45:00Z",
+      "username": "user4"
+    }
+  ]

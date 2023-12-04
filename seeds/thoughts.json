@@ -1,0 +1,12 @@
+[
+    {
+      "thoughtText": "This is a sample thought.",
+      "username": "user1",
+      "reactions": []
+    },
+    {
+      "thoughtText": "Another thought here.",
+      "username": "user2",
+      "reactions": []
+    }
+  ]

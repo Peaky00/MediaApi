@@ -1,21 +1,32 @@
-const { Schema } = require('mongoose');
+const { Schema, Types } = require('mongoose');
 
-const ReactionSchema = new Schema({
-  reactionBody: {
-    type: String,
-    required: true,
-    maxlength: 280, // Maximum 280 characters for the reaction body
-  },
-  username: {
-    type: String,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    // Add a getter method to format the timestamp on query
-    get: (timestamp) => new Date(timestamp).toDateString(),
-  },
-});
+const reactionSchema = new Schema(
+    {
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
+        reactionBody: {
+            type: String,
+            required: 'Reaction is required',
+            max: 280
+        },
+        username: {
+            type: String,
+            required: 'Username is required'
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+        }
+    },
+    {
+        toJSON: {
+            getters: true
+        },
+        id: false
+    }
+);
 
-module.exports = ReactionSchema;
+
+module.exports = reactionSchema;
